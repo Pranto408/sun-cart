@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <div className="border-b border-gray-200">
-      <nav className="w-11/12 h-16 bg-white flex items-center justify-between mx-auto">
+      <nav className="w-11/12  bg-white flex items-center py-2 justify-between mx-auto  flex-col md:flex-row gap-10">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1">
           <div className="w-12 h-12 relative">
