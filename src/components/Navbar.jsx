@@ -52,7 +52,7 @@ export default function Navbar() {
             Login
           </button>
           <button className="px-4 py-2 text-sm font-medium text-white bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] transition">
-            Sign Up
+            Register
           </button>
         </div>
       </nav>
