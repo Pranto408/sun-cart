@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import BannerImage from "@/assets/banner.png"
 import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 const Banner = () => {
   return (
     <section className="relative w-full h-125 mb-10 md:h-150 flex items-center justify-center overflow-hidden">
@@ -18,7 +19,7 @@ const Banner = () => {
 
       {/* Content Container */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <div className="inline-block px-4 py-1 mb-4 bg-orange-500 text-white font-bold rounded-full uppercase tracking-widest text-sm animate-bounce">
+        <div className="inline-block px-4 py-1 mb-4 bg-orange-700 text-white font-bold rounded-full uppercase tracking-widest text-sm animate-bounce">
           Hot Deals 🔥
         </div>
 
@@ -33,9 +34,11 @@ const Banner = () => {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="cursor-pointer px-8 py-4 bg-[#1C3557] text-xl text-white font-bold rounded-lg shadow-lg hover:bg-[#1C3557] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
-            Get started <FaArrowRight />
-          </button>
+          <Link href={"/products"}>
+            <button className="cursor-pointer px-8 py-4 bg-[#1C3557] active:scale-95 active:bg-[#1d3d69]  text-xl text-white font-bold rounded-lg shadow-lg duration-100 transform flex items-center justify-center gap-3 hover:bg-[#122642]">
+              Get started <FaArrowRight />
+            </button>
+          </Link>
         </div>
       </div>
 
