@@ -1,4 +1,6 @@
 import Banner from "@/components/homepage/Banner";
+import SummerCareTips from "@/components/homepage/SummerCareTips ";
+import TopBrands from "@/components/homepage/TopBrands";
 import PopularProducts from "@/components/PopularProducts";
 import Image from "next/image";
 export const metadata = {
@@ -8,7 +10,9 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <PopularProducts/>
+      <PopularProducts />
+      <SummerCareTips />
+      <TopBrands/>
     </div>
   );
 }

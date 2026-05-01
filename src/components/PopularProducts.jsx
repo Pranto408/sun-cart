@@ -7,9 +7,16 @@ const PopularProducts = async () => {
 
     return (
       <div className="w-11/12 mx-auto mb-10">
-        <h2 className="text-4xl font-bold mb-10 text-center">
+        <p className="text-blue-500 text-center font-semibold text-sm uppercase tracking-widest">
+          Our Products
+        </p>
+        <h2 className="text-4xl font-bold mb-3 text-center">
           Popular Products
         </h2>
+        <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm mb-7">
+          Discover our most popular products loved by customers for quality,
+          style, and everyday use.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {topProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
