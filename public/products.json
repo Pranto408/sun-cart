@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Portable Mini Fan",
+    "brand": "CoolBreeze",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "Handheld rechargeable mini fan for hot summer days.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Electronics"
+  },
+  {
+    "id": 3,
+    "name": "Cotton Summer T-Shirt",
+    "brand": "AirWear",
+    "price": 10,
+    "rating": 4.6,
+    "stock": 50,
+    "description": "Lightweight and breathable cotton T-shirt for daily summer wear.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "SkinGuard",
+    "price": 8,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "Protects skin from harmful UV rays with long-lasting SPF 50 protection.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 5,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroCool",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Keeps water cold for hours, perfect for summer hydration.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Beach Slippers",
+    "brand": "SeaStep",
+    "price": 9,
+    "rating": 4.4,
+    "stock": 40,
+    "description": "Comfortable and lightweight slippers ideal for beach and outdoor use.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Footwear"
+  }
+]

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import BannerImage from "@/assets/banner.png"
+import { FaArrowRight } from "react-icons/fa";
 const Banner = () => {
   return (
     <section className="relative w-full h-125 mb-10 md:h-150 flex items-center justify-center overflow-hidden">
-     
       <div className="absolute inset-0 z-0">
         <Image
           src={BannerImage}
@@ -33,8 +33,8 @@ const Banner = () => {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="cursor-pointer px-8 py-4 bg-[#1C3557] text-xl text-white font-bold rounded-lg shadow-lg hover:bg-[#1C3557] transition-all duration-300 transform hover:scale-105">
-            Get started
+          <button className="cursor-pointer px-8 py-4 bg-[#1C3557] text-xl text-white font-bold rounded-lg shadow-lg hover:bg-[#1C3557] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
+            Get started <FaArrowRight />
           </button>
         </div>
       </div>
