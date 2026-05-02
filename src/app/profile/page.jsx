@@ -1,13 +1,29 @@
-import React from 'react';
-export const metadata = {
-  title: "SunCart | Profile",
-};
-const page = () => {
-    return (
-      <div>
-        <h4 className="text-7xl">Profile Page </h4>
-      </div>
-    );
-};
+"use client";
+import { UpdateUserInfo } from "@/components/UpdateUserInfo";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Card } from "@heroui/react";
 
-export default page;
+export default function Profile() {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+
+  return (
+    <div className="flex items-center justify-center py-20 bg-gray-50">
+      <Card className="w-6/12 space-y-3 mx-auto flex flex-col items-center shadow-xl gap-3 p-8 ">
+        <Avatar className="h-30 w-30">
+          <Avatar.Image
+            alt={user?.name}
+            src={user?.image || undefined}
+            referrerPolicy="no-referrer"
+          />
+          <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+        </Avatar>
+        <div className="text-center space-y-2">
+          <p className="text-2xl font-medium">{user?.name}</p>
+          <p className="text-lg">{user?.email}</p>
+        </div>
+        <UpdateUserInfo />
+      </Card>
+    </div>
+  );
+}

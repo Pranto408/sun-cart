@@ -87,13 +87,6 @@ export default function Register() {
                 if (!["http:", "https:"].includes(url.protocol)) {
                   return "Image URL must use http or https";
                 }
-                if (
-                  !/\.(jpg|jpeg|png|gif|webp|svg|avif)(\?.*)?$/i.test(
-                    url.pathname,
-                  )
-                ) {
-                  return "URL must point to an image file (jpg, png, gif, webp, svg, etc.)";
-                }
               } catch {
                 return "Please enter a valid URL";
               }
@@ -102,9 +95,7 @@ export default function Register() {
           >
             <Label>Image URL</Label>
             <Input placeholder="https://example.com/image.png" />
-            <Description>
-              Must be a direct link to an image (jpg, png, gif, webp, svg)
-            </Description>
+            <Description>Must be a direct link to an image</Description>
             <FieldError />
           </TextField>
 
@@ -162,16 +153,16 @@ export default function Register() {
               Reset
             </Button>
           </div>
-              </Form>
-              <p className="text-center my-1">or</p>
-                      <Button
-                        onClick={handelGoogleSignIn}
-                        className="w-full"
-                        variant="outline"
-                      >
-                        <GrGoogle />
-                        Sign in with Google
-                      </Button>
+        </Form>
+        <p className="text-center my-1">or</p>
+        <Button
+          onClick={handelGoogleSignIn}
+          className="w-full"
+          variant="outline"
+        >
+          <GrGoogle />
+          Sign in with Google
+        </Button>
       </div>
     </div>
   );
