@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 export default function Register() {
     const router=useRouter()
@@ -30,7 +31,12 @@ export default function Register() {
       if (!error) {
           router.push('/')
       }
-  };
+    };
+     const handelGoogleSignIn = async () => {
+       const data = await authClient.signIn.social({
+         provider: "google",
+       });
+     };
 
   return (
     <div className="min-h-90vh flex items-center justify-center bg-gray-50 px-4 py-6">
@@ -156,7 +162,16 @@ export default function Register() {
               Reset
             </Button>
           </div>
-        </Form>
+              </Form>
+              <p className="text-center my-1">or</p>
+                      <Button
+                        onClick={handelGoogleSignIn}
+                        className="w-full"
+                        variant="outline"
+                      >
+                        <GrGoogle />
+                        Sign in with Google
+                      </Button>
       </div>
     </div>
   );

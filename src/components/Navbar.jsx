@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png"
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -12,6 +14,13 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const handelSignOut = async () => {
+    await authClient.signOut();
+  }
+  const userData = authClient.useSession()
+  const user = userData.data?.user
+  console.log(user);
+
   const [active, setActive] = useState("Home");
 
   return (
@@ -47,18 +56,35 @@ export default function Navbar() {
         </ul>
 
         {/* Auth Buttons */}
-        <div className="flex items-center gap-3">
-          <Link href={"/sign-in"}>
-            <button className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer active:scale-95 active:bg-gray-200 transition">
-              Login
+        {!user && (
+          <div className="flex items-center gap-3">
+            <Link href={"/sign-in"}>
+              <button className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer active:scale-95 active:bg-gray-200 transition">
+                Login
+              </button>
+            </Link>
+            <Link href={"/register"}>
+              <button className="px-4 py-2 text-sm font-medium text-white bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] transition">
+                Register
+              </button>
+            </Link>
+          </div>
+        )}
+        {user && (
+          <div className="flex items-center gap-3">
+            <Avatar>
+              <Avatar.Image
+                alt={user?.name}
+                src={user?.image}
+                referrerPolicy="no-referrer"
+              />
+              <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+            </Avatar>
+            <button onClick={handelSignOut} className="px-4 py-2 text-sm font-medium text-white bg-[#ec1717] rounded-md hover:bg-[#bc0808] cursor-pointer active:scale-95 active:bg-[#f80b0b] transition">
+              Sign Out
             </button>
-          </Link>
-          <Link href={"/register"}>
-            <button className="px-4 py-2 text-sm font-medium text-white bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] transition">
-              Register
-            </button>
-          </Link>
-        </div>
+          </div>
+        )}
       </nav>
     </div>
   );

@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignIn() {
   const onSubmit = async (e) => {
@@ -21,8 +22,14 @@ export default function SignIn() {
       password,
       callbackURL: "/",
     });
-    console.log({ data, error });
-  };
+
+    };
+    const handelGoogleSignIn = async () => {
+      const data = await authClient.signIn.social({
+        provider: "google",
+      });
+    };
+
 
   return (
     <div className="min-h-90vh flex items-center justify-center bg-gray-50 px-4 py-6">
@@ -95,6 +102,15 @@ export default function SignIn() {
             </Button>
           </div>
         </Form>
+        <p className="text-center my-3">or</p>
+        <Button
+          onClick={handelGoogleSignIn}
+          className="w-full"
+          variant="outline"
+        >
+          <GrGoogle />
+          Sign in with Google
+        </Button>
       </div>
     </div>
   );
