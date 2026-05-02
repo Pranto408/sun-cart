@@ -1,4 +1,4 @@
-import ProductCard from "./homepage/ProductCard";
+import ProductCard from "../ProductCard";
 
 const PopularProducts = async () => {
     const res = await fetch("https://sun-cart-two.vercel.app/products.json");

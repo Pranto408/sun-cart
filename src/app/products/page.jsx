@@ -1,4 +1,4 @@
-import ProductCard from '@/components/homepage/ProductCard';
+import ProductCard from '@/components/ProductCard';
 import React from 'react';
 export const metadata = {
   title: "SunCart | Products",

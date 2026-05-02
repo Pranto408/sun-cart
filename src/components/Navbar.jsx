@@ -15,7 +15,7 @@ export default function Navbar() {
   const [active, setActive] = useState("Home");
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b border-gray-200 sticky top-0 z-50 bg-white">
       <nav className="w-11/12  bg-white flex items-center py-2 justify-between mx-auto  flex-col md:flex-row gap-10">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1">
@@ -48,12 +48,16 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-3">
-          <button className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer active:scale-95 active:bg-gray-200 transition">
-            Login
-          </button>
-          <button className="px-4 py-2 text-sm font-medium text-white bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] transition">
-            Register
-          </button>
+          <Link href={"/sign-in"}>
+            <button className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer active:scale-95 active:bg-gray-200 transition">
+              Login
+            </button>
+          </Link>
+          <Link href={"/register"}>
+            <button className="px-4 py-2 text-sm font-medium text-white bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] transition">
+              Register
+            </button>
+          </Link>
         </div>
       </nav>
     </div>
