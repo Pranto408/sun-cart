@@ -60,7 +60,7 @@ const tips = [
 
 const SummerCareTips = () => {
   return (
-    <section className="bg-white px-4">
+    <section className="bg-white px-4 animate__backInLeft animate__animated">
       <div className="w-11/12 mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -68,7 +68,7 @@ const SummerCareTips = () => {
             Stay Safe This Season
           </span>
           <h2 className="text-4xl font-bold text-gray-900 mt-2">
-             Summer Care Tips
+            Summer Care Tips
           </h2>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto text-sm">
             Simple habits to keep you healthy, fresh, and glowing all summer

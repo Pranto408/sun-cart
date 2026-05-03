@@ -33,7 +33,7 @@ const brands = [
 
 const TopBrands = () => {
   return (
-    <section className="bg-white py-10 px-4">
+    <section className="bg-white py-10 px-4 animate__backInLeft animate__animated">
       <div className="w-11/12 mx-auto">
         {/* Header */}
         <div className="text-center mb-6">

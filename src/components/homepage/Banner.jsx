@@ -19,11 +19,11 @@ const Banner = () => {
 
       {/* Content Container */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <div className="inline-block px-4 py-1 mb-4 bg-orange-700 text-white font-bold rounded-full uppercase tracking-widest text-sm animate-bounce">
+        <div className="inline-block px-4 py-1 mb-4 bg-orange-700 text-white font-bold rounded-full uppercase tracking-widest text-sm animate__animated animate__heartBeat animate__infinite">
           Hot Deals 🔥
         </div>
 
-        <h1 className="text-4xl md:text-7xl font-extrabold text-white drop-shadow-lg tracking-tight">
+        <h1 className="text-4xl animate__fadeInLeftBig animate__animated  md:text-7xl font-extrabold text-white drop-shadow-lg tracking-tight">
           Summer Sale <br />
           <span className="text-yellow-400 text-5xl md:text-8xl">50% OFF</span>
         </h1>
@@ -35,7 +35,7 @@ const Banner = () => {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={"/products"}>
-            <button className="cursor-pointer px-8 py-4 bg-[#1C3557] active:scale-95 active:bg-[#1d3d69]  text-xl text-white font-bold rounded-lg shadow-lg duration-100 transform flex items-center justify-center gap-3 hover:bg-[#122642]">
+            <button className="animate__zoomIn animate__animated cursor-pointer px-8 py-4 bg-[#1C3557] active:scale-95 active:bg-[#1d3d69]  text-xl text-white font-bold rounded-lg shadow-lg duration-100 transform flex items-center justify-center gap-3 hover:bg-[#122642]">
               Get started <FaArrowRight />
             </button>
           </Link>

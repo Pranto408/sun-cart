@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
   const { name, price, rating, image,id } = product;
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-200">
+    <div className="bg-white rounded-xl animate__animated animate__fadeIn shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-200">
       <div className="relative w-full aspect-square">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
