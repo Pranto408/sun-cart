@@ -35,7 +35,7 @@ const Banner = () => {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link href={"/products"}>
-            <button className="animate__zoomIn animate__animated cursor-pointer px-8 py-4 bg-[#1C3557] active:scale-95 active:bg-[#1d3d69]  text-xl text-white font-bold rounded-lg shadow-lg duration-100 transform flex items-center justify-center gap-3 hover:bg-[#122642]">
+            <button className="animate__zoomIn animate__animated cursor-pointer  bg-[#1C3557] active:scale-95 active:bg-[#1d3d69]  text-xl text-white font-medium rounded-lg shadow-lg duration-100 transform flex items-center justify-center gap-3 hover:bg-[#122642] px-4 py-2  md:px-8 md:py-4 md:font-bold">
               Get started <FaArrowRight />
             </button>
           </Link>

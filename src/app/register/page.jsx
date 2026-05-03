@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 
@@ -39,8 +40,8 @@ export default function Register() {
      };
 
   return (
-    <div className="min-h-90vh flex items-center justify-center bg-gray-50 px-4 py-6">
-      <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+    <div className="min-h-90vh flex items-center justify-center bg-gray-50 px-4 py-3">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-gray-200 py-4 px-8">
         {/* Header */}
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-1">
@@ -144,7 +145,7 @@ export default function Register() {
           </TextField>
 
           {/* Buttons */}
-          <div className="flex gap-3 pt-2">
+          <div className="flex gap-3 pt-1">
             <Button type="submit" className="flex-1">
               <Check />
               Submit
@@ -163,6 +164,16 @@ export default function Register() {
           <GrGoogle />
           Sign in with Google
         </Button>
+
+        <p className="text-center text-sm text-gray-500 mt-2">
+          Already Registered?{" "}
+          <Link
+            href="/sign-in"
+            className="text-blue-600 font-medium hover:underline"
+          >
+            Log in
+          </Link>
+        </p>
       </div>
     </div>
   );

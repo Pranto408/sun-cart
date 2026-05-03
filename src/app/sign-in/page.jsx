@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { GrGoogle } from "react-icons/gr";
 
 export default function SignIn() {
@@ -111,6 +112,15 @@ export default function SignIn() {
           <GrGoogle />
           Sign in with Google
         </Button>
+        <p className="text-center text-sm text-gray-500 mt-4">
+          Don&apos;t have an account?{" "}
+          <Link
+            href="/register"
+            className="text-blue-600 font-medium hover:underline"
+          >
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
