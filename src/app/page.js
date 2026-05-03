@@ -12,7 +12,7 @@ export default function Home() {
       <Banner />
       <PopularProducts />
       <SummerCareTips />
-      <TopBrands/>
+      <TopBrands />
     </div>
   );
 }

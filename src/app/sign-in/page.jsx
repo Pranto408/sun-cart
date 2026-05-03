@@ -12,6 +12,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignIn() {
   const onSubmit = async (e) => {
@@ -23,6 +24,11 @@ export default function SignIn() {
       password,
       callbackURL: "/",
     });
+      if (error) {
+        toast.error("Sign in failed. Please try again.");
+      } else {
+        toast.success("Sign in successful! Welcome back 🎉");
+      }
 
     };
     const handelGoogleSignIn = async () => {

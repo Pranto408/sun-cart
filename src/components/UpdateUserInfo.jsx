@@ -5,6 +5,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 import { BiEdit } from "react-icons/bi";
 import { FaUser } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export function UpdateUserInfo() {
     const onSubmit = async (e) => {
@@ -51,7 +52,13 @@ export function UpdateUserInfo() {
                     <Button slot="close" variant="secondary">
                       Cancel
                     </Button>
-                    <Button type="submit" slot="close">Update</Button>
+                    <Button
+                      onClick={() => toast.success("Profile Updated")}
+                      type="submit"
+                      slot="close"
+                    >
+                      Update
+                    </Button>
                   </Modal.Footer>
                 </form>
               </Surface>

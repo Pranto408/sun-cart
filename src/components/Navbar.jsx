@@ -98,6 +98,7 @@ import logo from "@/assets/logo.png";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import { usePathname } from "next/navigation";
+import { toast } from "react-toastify";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -107,6 +108,7 @@ const navLinks = [
 
 export default function Navbar() {
   const handelSignOut = async () => {
+    toast.error("Logging Out")
     await authClient.signOut();
   };
   const userData = authClient.useSession();

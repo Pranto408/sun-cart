@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { ShoppingCart, Tag, Layers, PackageCheck } from "lucide-react";
+import { toast } from "react-toastify";
 
 const ProductDetails = async ({ params }) => {
   const { id } = await params;
@@ -32,14 +33,6 @@ const ProductDetails = async ({ params }) => {
           <div className="p-8 flex flex-col justify-between">
             <div>
               {/* Category & Brand */}
-              {/* <div className="flex items-center gap-2 mb-3">
-                <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
-                  {p.category}
-                </span>
-                <span className="bg-gray-100 text-gray-500 text-xs font-medium px-3 py-1 rounded-full">
-                  {p.brand}
-                </span>
-              </div> */}
 
               {/* Name */}
               <h1 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
@@ -108,8 +101,9 @@ const ProductDetails = async ({ params }) => {
                 ${p.price}
               </span>
               <button
+                
                 disabled={p.stock === 0}
-                className="flex items-center gap-2 bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] disabled:bg-gray-300 disabled:cursor-not-allowed text-white  font-semibold px-6 py-3 transition-colors duration-200"
+                className="flex items-center gap-2 bg-[#1C3557] rounded-md hover:bg-[#152741] cursor-pointer active:scale-95 active:bg-[#1d3d69] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 transition-colors duration-200"
               >
                 <ShoppingCart className="w-5 h-5" />
                 Buy Now

@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function Register() {
     const router=useRouter()
@@ -28,10 +29,15 @@ export default function Register() {
       email,
       password,
     });
-      console.log({ data, error });
-      if (!error) {
-          router.push('/')
-      }
+    console.log({ data, error });
+    
+     if (error) {
+       toast.error("Registration failed. Please try again.");
+     } else {
+       toast.success("Registration successful ! Welcome");
+       router.push("/");
+    }
+    
     };
      const handelGoogleSignIn = async () => {
        const data = await authClient.signIn.social({
