@@ -9,7 +9,7 @@ export default function Profile() {
 
   return (
     <div className="flex items-center justify-center py-20 bg-gray-50 animate__slow animate__animated animate__fadeIn">
-      <Card className="w-6/12 space-y-3 mx-auto flex flex-col items-center shadow-xl gap-3 p-8 ">
+      <Card className="w-11/12 md:w-6/12 space-y-3 mx-auto flex flex-col items-center shadow-xl gap-3 p-8 ">
         <Avatar className="h-30 w-30">
           <Avatar.Image
             alt={user?.name}

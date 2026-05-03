@@ -16,7 +16,7 @@ const ProductDetails = async ({ params }) => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="w-9/12 mx-auto bg-white rounded-2xl shadow-md overflow-hidden">
+      <div className="w-11/12 sm:w-9/12 mx-auto bg-white rounded-2xl shadow-md overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image */}
           <div className="relative w-full aspect-square">
