@@ -35,6 +35,8 @@ import { Avatar, Card } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+export const dynamic = "force-dynamic"; // এটা যোগ করো
+
 export default function Profile() {
   const userData = authClient.useSession();
   const user = userData.data?.user;
