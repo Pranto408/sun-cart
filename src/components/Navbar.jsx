@@ -21,10 +21,11 @@ export default function Navbar() {
 const router = useRouter();
 const handelSignOut = async () => {
   toast.error("Logging Out");
-  await authClient.signOut();
+  const result = await authClient.signOut();
+  console.log("signOut result:", result); // browser console এ কি আসছে দেখুন
 
   const isProtected =
-    pathname === "/profile" || pathname.startsWith("/products/"); 
+    pathname === "/profile" || pathname.startsWith("/products/");
 
   if (isProtected) {
     router.push("/sign-in");
