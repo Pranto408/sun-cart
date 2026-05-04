@@ -6,8 +6,9 @@ import Image from "next/image";
 import logo from "@/assets/logo.png";
 import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -17,11 +18,18 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+const router = useRouter();
+const handelSignOut = async () => {
+  toast.error("Logging Out");
+  await authClient.signOut();
 
-  const handelSignOut = async () => {
-    toast.error("Logging Out");
-    await authClient.signOut();
-  };
+  const isProtected =
+    pathname === "/profile" || pathname.startsWith("/products/"); 
+
+  if (isProtected) {
+    router.push("/sign-in");
+  }
+};
 
   const userData = authClient.useSession();
   const user = userData.data?.user;
